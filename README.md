@@ -3,6 +3,7 @@
 - Sql Server 2019
 - MySql 5.7
 - MongoDB 3.4
+
 ###Spinning up
 Start services:
 ```
