@@ -3,8 +3,8 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
-      - SA_PASSWORD=Pass@word
-      - ACCEPT_EULA=Y
+      SA_PASSWORD: "Pass@word"
+      ACCEPT_EULA: "Y"
     ports:
       - "2433:1433"
     volumes:
@@ -12,13 +12,14 @@ services:
 
   mysql:
     image: mysql/mysql-server:5.7
-    volumes:
-        - ./docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
-        - ./mysqlvolume:/var/lib/mysql
+    restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=Pass@word
+      MYSQL_ROOT_PASSWORD: "Pass@word"
+      MYSQL_ROOT_HOST: "%"
     ports:
-      - "13306:3306"
+      - "13306:3306"    
+    volumes:
+      - ./docker.data/mysql:/var/lib/mysql
 
   mongo:
     image: mongo:3.4

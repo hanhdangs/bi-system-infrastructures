@@ -1,3 +1,5 @@
 sqlvolume/
 mysqlvolume/
 volume/
+docker-entrypoint-initdb.d/
+docker.data/
