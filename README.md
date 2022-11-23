@@ -1,10 +1,10 @@
-###Services
+### Services
 - LocalStack
 - Sql Server 2019
 - MySql 5.7
 - MongoDB 3.4
 
-###Spinning up
+### Spinning up
 Start services:
 ```
 docker-compose up
@@ -15,7 +15,7 @@ Stop services:
 docker-compose down
 ```
 
-###Connection strings
+### Database Connection strings
 - mongodb
 ```
 mongodb://localhost:37017
@@ -29,7 +29,7 @@ server=localhost,2433;initial catalog=<DB_NAME>;user id=sa;password=Pass@word;
 server=localhost;port=13306;database=<DB_NAME>;uid=root;pwd=Pass@word;
 ```
 
-###LocalStack
+### LocalStack
 - Endpoint
 ```
 http://localhost:4566/
